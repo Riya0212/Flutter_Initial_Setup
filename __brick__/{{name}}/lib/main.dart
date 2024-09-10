@@ -12,6 +12,8 @@ import 'package:{{name.lowerCase()}}/injectionContainer/injection_container.dart
 import 'package:{{name.lowerCase()}}/pages/restart/index.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 
 void main() async {
@@ -48,7 +50,7 @@ class _MyAppState extends State<MyApp> {
    WidgetsBinding.instance.addPostFrameCallback((_) async {
       handleGetLanguage();
     });
-
+  }
   handleGetLanguage() async {
     AppLocale? matchingLocale = appLocales!.firstWhere(
       (locale) => locale.languageCode == appLanguage,
